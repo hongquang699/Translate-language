@@ -29,9 +29,11 @@ from file_handler import process_file_translation, SUPPORTED_EXTENSIONS, ALL_EXT
 # ==========================================
 UI_TEXTS = {
     "en": {
-        "app_title": "Universal File & Text Translator",
+        "app_title": "Universal File & Text Translator • By Hong Quang",
         "header_title": "🌐 UNIVERSAL FILE & TEXT TRANSLATOR",
         "header_sub": "Translate Word (.docx), Excel (.xlsx), PowerPoint (.pptx), PDF, Subtitles (.srt, .vtt), Text (.txt, .md, .json, .csv)...",
+        "creator_badge": "✨ Creator: Hong Quang",
+        "footer_text": "Universal File & Text Translator • Created by Hong Quang",
         "ui_lang_label": "UI Language / Ngôn ngữ:",
         "tab_file": "  📁 File Translator  ",
         "tab_text": "  📝 Paste & Translate Text  ",
@@ -107,9 +109,11 @@ UI_TEXTS = {
     },
 
     "vi": {
-        "app_title": "Phần Mềm Dịch Thuật Đa Năng - Universal Translator",
+        "app_title": "Phần Mềm Dịch Thuật Đa Năng • Tác giả: Hong Quang",
         "header_title": "🌐 PHẦN MỀM DỊCH THUẬT ĐA NĂNG",
         "header_sub": "Dịch Word (.docx), Excel (.xlsx), PowerPoint (.pptx), PDF, Phụ đề (.srt, .vtt), Văn bản (.txt, .md, .json, .csv)...",
+        "creator_badge": "✨ Tác giả: Hong Quang",
+        "footer_text": "Phần Mềm Dịch Thuật Đa Năng • Phát triển bởi Hong Quang (Creator: Hong Quang)",
         "ui_lang_label": "Ngôn ngữ giao diện / UI Language:",
         "tab_file": "  📁 Dịch Tệp Tin (File)  ",
         "tab_text": "  📝 Dán & Dịch Văn Bản  ",
@@ -269,6 +273,22 @@ class ModernTranslatorGUI:
         )
         self.btn_lang_en.pack(side="left", padx=2)
 
+        # Creator Badge
+        creator_frame = tk.Frame(top_right_frame, bg=self.bg_color)
+        creator_frame.pack(side="top", anchor="e", pady=(4, 0))
+        self.lbl_creator_badge = tk.Label(
+            creator_frame,
+            text="",
+            font=("Segoe UI", 9, "bold"),
+            bg="#e8f5e9",
+            fg="#2e7d32",
+            padx=8,
+            pady=2,
+            relief="solid",
+            bd=1
+        )
+        self.lbl_creator_badge.pack(anchor="e")
+
         # Header Titles and Logo (Left)
         title_box = tk.Frame(header_frame, bg=self.bg_color)
         title_box.pack(side="left", fill="x", expand=True)
@@ -292,9 +312,15 @@ class ModernTranslatorGUI:
         self.lbl_header_sub = ttk.Label(text_title_box, text="", style="SubHeader.TLabel")
         self.lbl_header_sub.pack(anchor="w")
 
+        # Footer at bottom
+        footer_frame = tk.Frame(self.root, bg=self.bg_color, pady=4)
+        footer_frame.pack(fill="x", side="bottom")
+        self.lbl_footer = tk.Label(footer_frame, text="", font=("Segoe UI", 8), fg="#757575", bg=self.bg_color)
+        self.lbl_footer.pack()
+
         # Tabs container
         self.notebook = ttk.Notebook(self.root)
-        self.notebook.pack(fill="both", expand=True, padx=15, pady=(0, 15))
+        self.notebook.pack(fill="both", expand=True, padx=15, pady=(0, 5))
 
         # Tab 1: File Translator
         self.tab_file = tk.Frame(self.notebook, bg="#ffffff", padx=15, pady=15)
@@ -564,6 +590,8 @@ class ModernTranslatorGUI:
         self.lbl_header_title.configure(text=self._t("header_title"))
         self.lbl_header_sub.configure(text=self._t("header_sub"))
         self.lbl_ui_switcher.configure(text=self._t("ui_lang_label"))
+        self.lbl_creator_badge.configure(text=self._t("creator_badge"))
+        self.lbl_footer.configure(text=self._t("footer_text"))
 
         # Notebook tabs
         self.notebook.tab(0, text=self._t("tab_file"))

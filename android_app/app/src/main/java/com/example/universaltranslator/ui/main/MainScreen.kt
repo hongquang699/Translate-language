@@ -92,13 +92,14 @@ fun MainScreen(
                         Text(
                             text = if (isVietnamese) "Dịch Thuật Đa Năng" else "Universal Translator",
                             fontWeight = FontWeight.Bold,
-                            fontSize = 18.sp,
+                            fontSize = 17.sp,
                             color = Color.White
                         )
                         Text(
-                            text = if (isVietnamese) "Dịch văn bản & tệp tin" else "Text & File Translator",
-                            fontSize = 12.sp,
-                            color = Color(0xFFE3F2FD)
+                            text = "Creator: Hong Quang",
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = Color(0xFFFFEB3B)
                         )
                     }
                 },
