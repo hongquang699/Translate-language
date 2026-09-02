@@ -1,0 +1,8 @@
+{
+  "title": "Universal File Translator",
+  "description": "A powerful Python script for translating files.",
+  "features": [
+    "Translate multiple languages",
+    "Support diverse file formats"
+  ]
+}

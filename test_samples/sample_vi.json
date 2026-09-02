@@ -1,0 +1,8 @@
+{
+  "title": "Trình dịch tệp phổ quát",
+  "description": "Một tập lệnh Python mạnh mẽ để dịch các tập tin.",
+  "features": [
+    "Dịch nhiều ngôn ngữ",
+    "Hỗ trợ các định dạng tập tin đa dạng"
+  ]
+}

@@ -1,0 +1,49 @@
+# ==========================================
+# SENSITIVE DATA & API KEYS (CRITICAL)
+# ==========================================
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.keystore
+*.jks
+secrets.json
+credentials.json
+google-services.json
+config.ini
+api_keys.json
+
+# Android local credentials & SDK configs
+local.properties
+android_app/local.properties
+**/local.properties
+*.jks
+*.keystore
+
+# Python artifacts & caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+*.spec
+
+# Android & Gradle build files
+.gradle/
+**/build/
+android_app/.gradle/
+android_app/app/build/
+android_app/build/
+.idea/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini

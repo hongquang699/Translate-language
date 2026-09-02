@@ -1,0 +1,7 @@
+1
+00:00:01,000 --> 00:00:04,000
+Chào mừng mọi người đến với hội nghị công nghệ thường niên.
+
+2
+00:00:05,000 --> 00:00:08,500
+Hôm nay chúng tôi rất vui mừng được giới thiệu những cải tiến mới nhất của mình.
