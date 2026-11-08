@@ -41,7 +41,3 @@ A powerful, all-in-one translation tool supporting **over 130+ languages** with 
 - Copy [`release/UniversalTranslator.apk`](file:///c:/Users/HOA%20BINH/Translate/release/UniversalTranslator.apk) to your Android device and install it directly.
 
 ---
-
-## 🔄 GitHub Synchronization (Đồng Bộ Mã Nguồn)
-- **1-Click Push:** Double-click [`push_to_github.bat`](file:///c:/Users/HOA%20BINH/Translate/push_to_github.bat) to automatically stage, commit, and push all files to [`hongquang699/Translate-language`](https://github.com/hongquang699/Translate-language).
-- **Command Line:** Run `python github_service.py "Your commit message"`
